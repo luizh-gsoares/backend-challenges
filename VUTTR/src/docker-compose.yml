@@ -1,0 +1,29 @@
+﻿services:
+  vuttr:
+    container_name: vuttr
+    image: vuttr
+    ports:
+      - "3000:80"
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - sqlserver
+  
+  sqlserver:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: "Nova@Senha123Legal"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    expose:
+      - 1433      
+    restart: always
+    volumes:
+      - ./Infra/Volumes/data:/var/opt/mssql/data
+      - ./Infra/Volumes/log:/var/opt/mssql/log
+      - ./Infra/Volumes/secrets:/var/opt/mssql/secrets
