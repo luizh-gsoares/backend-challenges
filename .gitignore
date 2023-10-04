@@ -6,7 +6,11 @@
 
 # folders
 /.idea
-/VUTTR/src/.idea
-/VUTTR/src/bin
-/VUTTR/src/obj
-/VUTTR/src/Infra/Volumes
+VUTTR/src/.idea
+VUTTR/src/bin
+VUTTR/src/obj
+VUTTR/src/Infra/Volumes
+Infra/Volumes/
+.vscode/launch.json
+.vscode/tasks.json
+
