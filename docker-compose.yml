@@ -33,6 +33,6 @@ services:
       - 1433
     restart: always
     volumes:
-      - ./Infra/Volumes/data:/var/opt/mssql/data
-      - ./Infra/Volumes/log:/var/opt/mssql/log
-      - ./Infra/Volumes/secrets:/var/opt/mssql/secrets
+      - /VUTTR/src/Infra/Volumes/data:/var/opt/mssql/data
+      - /VUTTR/src/Infra/Volumes/log:/var/opt/mssql/log
+      - /VUTTR/src/Infra/Volumes/secrets:/var/opt/mssql/secrets
