@@ -3,6 +3,5 @@
 public class Tag : Entity
 {
     public string Name { get; set; }
-    public List<ToolTag> ToolTags { get; set; }
-    public List<Tool> Tools { get; set; }
+    public ICollection<Tool> Tools { get; set; }
 }
