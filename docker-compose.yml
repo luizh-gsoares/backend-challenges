@@ -12,7 +12,7 @@ services:
       dockerfile: VUTTR/src/Dockerfile
     ports:
       - 3000:3000
-    restart: always
+    restart: on-failure
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Data Source=sqlserver;Initial Catalog=Vuttr;User ID=sa;Password=Nova@Senha123Legal
